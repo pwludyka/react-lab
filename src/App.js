@@ -8,7 +8,6 @@ function App() {
   }  
   
   let message = "";
-
   if (title.length < 5) {
     message = 'Title is too short';
   } else if (title.length < 15) {
@@ -16,8 +15,8 @@ function App() {
   } else { 
     message = 'Title is too long';
   }
-  
 
+  
   return (
     <div>
       <h1>My favourite movies to watch</h1>
@@ -26,6 +25,7 @@ function App() {
         title.length > 0 && <div>{message}</div>
       }
       <input type="text" onChange={handleChange}/>
+      <button onClick={() => alert(title)}>Pokaż tytuł filmu</button>
     </div>
   
   );
